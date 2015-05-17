@@ -1,5 +1,5 @@
 set nu
-set et sw=4
+set et sw=4 sts=4
 
 execute pathogen#infect()
 syntax on

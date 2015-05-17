@@ -52,3 +52,7 @@ Vim Setup Tutor
     git commit -m 'init commit'
     git push -u github master
 
+# clone from github
+
+    git clone --recursive https://github.com/vimagick/.vim.git ~/.vim
+
