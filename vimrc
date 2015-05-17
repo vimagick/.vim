@@ -1,13 +1,15 @@
 set nu
 set et sw=4 sts=4
 
-if has('gui_running')
-    set guifont=DejaVu\ Sans\ Mono\ for\ Powerline:h16
-endif
-
 execute pathogen#infect()
 syntax on
 filetype plugin indent on
+
+if has('gui_running')
+    set gfn=DejaVu\ Sans\ Mono\ for\ Powerline:h16
+    set bg=light
+    color solarized
+endif
 
 set rtp+=~/.vim/bundle/powerline/powerline/bindings/vim
 
