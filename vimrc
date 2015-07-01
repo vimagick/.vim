@@ -1,5 +1,6 @@
 set nu
 set et sw=4 sts=4
+set cc=79
 
 execute pathogen#infect()
 syntax on
