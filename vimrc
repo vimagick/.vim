@@ -1,6 +1,20 @@
 set nu
 set et sw=4 sts=4
 set cc=79
+set hls
+set bsk+=/private/tmp/*
+
+let mapleader = ','
+nnoremap <C-l>           gt
+nnoremap <C-h>           gT
+nnoremap <C-j>           <C-e>
+nnoremap <C-k>           <C-y>
+nnoremap <leader>w       <C-w>
+nnoremap <leader>h       : wincmd h<CR>
+nnoremap <leader>j       : wincmd j<CR>
+nnoremap <leader>k       : wincmd k<CR>
+nnoremap <leader>l       : wincmd l<CR>
+nnoremap <leader>p       : wincmd p<CR>
 
 execute pathogen#infect()
 syntax on
