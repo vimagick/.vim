@@ -36,6 +36,16 @@ Vim Setup Tutor
     git submodule add https://github.com/tpope/vim-sensible.git bundle/sensible
     git submodule add https://github.com/powerline/powerline.git bundle/powerline
 
+    git config submodule.bundle/vimwiki.ignore dirty
+
+    vim -c 'Helptags|q'
+
+> `vimwiki` doesn't ignore `tags`, we need to tell git to ignore it.
+
+# upgrade plugins
+
+    git submodule foreach git pull origin master
+
 # config fonts
 
     wget https://github.com/powerline/powerline/raw/develop/font/PowerlineSymbols.otf
