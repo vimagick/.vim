@@ -16,6 +16,17 @@ nnoremap <leader>k       : wincmd k<CR>
 nnoremap <leader>l       : wincmd l<CR>
 nnoremap <leader>p       : wincmd p<CR>
 
+aug XXX
+    au!
+    au QuickFixCmdPost *grep*   cwindow
+    au FileType *               setl textwidth=0
+    au FileType yaml            setl shiftwidth=2 softtabstop=2
+    au FileType json            setl shiftwidth=2 softtabstop=2
+    au FileType html            setl shiftwidth=2 softtabstop=2
+    au FileType css             setl shiftwidth=2 softtabstop=2
+    au FileType javascript      setl shiftwidth=2 softtabstop=2
+aug END
+
 execute pathogen#infect()
 syntax on
 filetype plugin indent on
