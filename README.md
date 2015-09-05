@@ -57,7 +57,8 @@ Vim Setup Tutor
 
 # push to github
 
-    git remote add github git@github.com:vimagick/.vim.git
+    git remote rename origin upstream
+    git remote add orgin git@github.com:vimagick/.vim.git
     git add .
     git commit -m 'init commit'
     git push -u github master
