@@ -16,20 +16,21 @@ nnoremap <leader>k       : wincmd k<CR>
 nnoremap <leader>l       : wincmd l<CR>
 nnoremap <leader>p       : wincmd p<CR>
 
+execute pathogen#infect()
+syntax on
+filetype plugin indent on
+
 aug XXX
     au!
     au QuickFixCmdPost *grep*   cwindow
     au FileType *               setl textwidth=0
-    au FileType yaml            setl shiftwidth=2 softtabstop=2
-    au FileType json            setl shiftwidth=2 softtabstop=2
-    au FileType html            setl shiftwidth=2 softtabstop=2
-    au FileType css             setl shiftwidth=2 softtabstop=2
-    au FileType javascript      setl shiftwidth=2 softtabstop=2
+    au FileType css             setl tabstop=2 shiftwidth=2 softtabstop=2
+    au FileType html            setl tabstop=2 shiftwidth=2 softtabstop=2
+    au FileType javascript      setl tabstop=2 shiftwidth=2 softtabstop=2
+    au FileType json            setl tabstop=2 shiftwidth=2 softtabstop=2
+    au FileType make            setl tabstop=4 shiftwidth=4 softtabstop=4 noexpandtab
+    au FileType yaml            setl tabstop=2 shiftwidth=2 softtabstop=2 indentkeys-=<:>
 aug END
-
-execute pathogen#infect()
-syntax on
-filetype plugin indent on
 
 if has('gui_running')
     set gfn=DejaVu\ Sans\ Mono\ for\ Powerline:h16
